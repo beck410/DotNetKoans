@@ -40,19 +40,19 @@ namespace DotNetKoans.CSharp
         [Koan(1)]
         public void ExtensionMethodsShowUpInTheCurrentClass()
         {
-            Assert.Equal(FILL_ME_IN, this.HelloWorld());
+            Assert.Equal("Hello!", this.HelloWorld());
         }
 
         [Koan(2)]
         public void ExtensionMethodsWithParameters()
         {
-            Assert.Equal(FILL_ME_IN, this.SayHello("Cory"));
+            Assert.Equal("Hello, Cory!", this.SayHello("Cory"));
         }
 
         [Koan(3)]
         public void ExtensionMethodsWithVariableParameters()
         {
-            Assert.Equal(FILL_ME_IN, this.MethodWithVariableArguments("Cory", "Will", "Corey"));
+          Assert.Equal(new string[]{"Corey","Will","Corey"}, this.MethodWithVariableArguments("Cory", "Will", "Corey"));
         }
 
         //Extension methods can extend any class my referencing 
@@ -76,7 +76,7 @@ namespace DotNetKoans.CSharp
         [Koan(5)]
         public void LocalMethodsWithVariableParams()
         {
-            Assert.Equal(FILL_ME_IN, this.LocalMethodWithVariableParameters("Cory", "Will", "Corey"));
+            Assert.Equal(new string[] {"Cory","Will","Cory"}, this.LocalMethodWithVariableParameters("Cory", "Will", "Corey"));
         }
 
         //Note how we called the method by saying "this.LocalMethodWithVariableParameters"
