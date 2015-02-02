@@ -35,8 +35,7 @@ namespace DotNetKoans.CSharp
             Assert.True(array.IsFixedSize);
 
             //...it means we can't do this: array[1] = 13;
-            Assert.Throws(typeof(IndexOutOfRangeException
-), delegate() { array[1] = 13; });
+            Assert.Throws(typeof(IndexOutOfRangeException), delegate() { array[1] = 13; });
 
             //This is because the array is fixed at length 1. You could write a function
             //which created a new array bigger than the last, copied the elements over, and
